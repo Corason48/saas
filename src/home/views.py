@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from visits.models import Visit
-def get_home_view(request,*args, **kwargs):
+def home_view(request,*args, **kwargs):
+    return about_view(request,*args, **kwargs)
+def about_view(request,*args, **kwargs):
     
     html='test.html'
     # Visit.objects.create()
